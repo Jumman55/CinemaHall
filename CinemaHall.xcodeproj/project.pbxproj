@@ -11,6 +11,7 @@
 		A74CF10727F631EE00465094 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CF10627F631EE00465094 /* ContentView.swift */; };
 		A74CF10927F631EF00465094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74CF10827F631EF00465094 /* Assets.xcassets */; };
 		A74CF10C27F631EF00465094 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74CF10B27F631EF00465094 /* Preview Assets.xcassets */; };
+		A763E6D327F63F5A004A6447 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A763E6D227F63F5A004A6447 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A74CF10627F631EE00465094 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A74CF10827F631EF00465094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74CF10B27F631EF00465094 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A763E6D227F63F5A004A6447 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,11 @@
 			isa = PBXGroup;
 			children = (
 				A74CF10427F631EE00465094 /* CinemaHallApp.swift */,
-				A74CF10627F631EE00465094 /* ContentView.swift */,
+				A763E6D127F63F2C004A6447 /* Models */,
+				A763E6D027F63F1F004A6447 /* View */,
+				A763E6CF27F63F11004A6447 /* Controllers */,
+				A763E6CE27F63F04004A6447 /* Stores */,
+				A763E6CD27F63EEA004A6447 /* Helper */,
 				A74CF10827F631EF00465094 /* Assets.xcassets */,
 				A74CF10A27F631EF00465094 /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				A74CF10B27F631EF00465094 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A763E6CD27F63EEA004A6447 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		A763E6CE27F63F04004A6447 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		A763E6CF27F63F11004A6447 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A74CF10627F631EE00465094 /* ContentView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A763E6D027F63F1F004A6447 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A763E6D127F63F2C004A6447 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A763E6D227F63F5A004A6447 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74CF10727F631EE00465094 /* ContentView.swift in Sources */,
+				A763E6D327F63F5A004A6447 /* Movie.swift in Sources */,
 				A74CF10527F631EE00465094 /* CinemaHallApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
