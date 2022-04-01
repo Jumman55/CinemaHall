@@ -13,20 +13,37 @@ class MovieStore: MovieService{
     private init() {}
     
     private let apiKey = "e69b260d5a26f972787b9aa2a8f69709"
-    private let baseAPI = "https://api.themoviedb.org/3"
+    private let baseAPIURL = "https://api.themoviedb.org/3"
     private let urlSession = URLSession.shared
     private let jsonDecoder = Utils.jsonDecoder
     
     func fetchMovies(from endpoint: MovieListEndpoint) async throws -> [Movie] {
-        <#code#>
+        guard let url = URL(string: "\(baseAPIURL)/movie\(endpoint.rawValue)") else{
+            throw MovieError.invalidEndpoint
+        }
+        let movieResponse: MovieResponse = try await self.loadAndDecode(url: url)
+        print(movieResponse.results)
+        return movieResponse.results
     }
     
     func fetchMovie(id: Int) async throws -> Movie {
-        <#code#>
+        guard let url = URL(string: "\(baseAPIURL)/movie\(id)") else{
+            throw MovieError.invalidEndpoint
+        }
+        return try await self.loadAndDecode(url: url, params: ["append_to_response": "vidoes,credits"])
     }
     
     func searchMovie(query: String) async throws -> [Movie] {
-        <#code#>
+        guard let url = URL(string: "\(baseAPIURL)/search/movie") else{
+            throw MovieError.invalidEndpoint
+        }
+        let movieResponse: MovieResponse = try await self.loadAndDecode(url: url, params: [
+            "language": "en-US",
+            "include_adult": "false",
+            "region": "US",
+            "query": query
+        ])
+        return movieResponse.results
     }
     
     
